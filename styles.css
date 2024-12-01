@@ -1,0 +1,232 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #ff5e78;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #ff5e78;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff3b50;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff5e78;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #ff5e78;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #ff3b50;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Kue Ulang Tahun Gepeng */
+.cake-flat {
+    margin: 20px auto;
+    position: relative;
+    width: 200px;
+    height: 60px; /* Membuat kue gepeng */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    perspective: 1000px; /* Menambahkan perspektif untuk efek 3D */
+}
+
+.base {
+    width: 200px;
+    height: 20px;
+    background: #ff5e78;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3); /* Efek bayangan untuk kedalaman */
+}
+
+.layer {
+    position: absolute;
+    border-radius: 10px;
+    width: 180px;
+    height: 25px;
+    background: #fad0c4;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+}
+
+.layer.top {
+    top: 0;
+    width: 200px;
+    background: #f9a7b1;
+}
+
+.layer.middle {
+    top: 25px;
+    width: 180px;
+    height: 20px;
+    background: #ff9eaa;
+    z-index: 3;
+}
+
+.layer.bottom {
+    top: 45px;
+    width: 160px;
+    height: 15px;
+    background: #ff5e78;
+    z-index: 4;
+}
+
+.topping {
+    width: 20px;
+    height: 20px;
+    background-color: #ffeb3b;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.topping.small {
+    width: 15px;
+    height: 15px;
+    background-color: #ff7043;
+}
+
+.candle {
+    width: 12px;
+    height: 40px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: -25px;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.flame {
+    width: 12px;
+    height: 18px;
+    background: radial-gradient(circle, #ff0, #f90, #f00);
+    border-radius: 50%;
+    animation: flicker 1s infinite;
+}
+
+@keyframes flicker {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Efek 3D untuk kue */
+.cake-flat:hover .layer {
+    transform: rotateX(5deg) rotateY(5deg); /* Menambahkan efek rotasi */
+}
